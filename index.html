@@ -27,7 +27,7 @@ body{
     animation:fadeIn 2s;
 }
 
-/* LIGHT OVERLAY */
+/* OVERLAY */
 
 body::before{
     content:"";
@@ -42,7 +42,7 @@ body::before{
     z-index:-1;
 }
 
-/* NAVIGATION BAR */
+/* NAVBAR */
 
 nav{
     width:100%;
@@ -66,7 +66,7 @@ nav{
 
 .logo{
     color:white;
-    font-size:42px;
+    font-size:40px;
     font-weight:bold;
 
     letter-spacing:2px;
@@ -95,6 +95,7 @@ nav ul li a{
 
 nav ul li a:hover{
     color:yellow;
+
     text-shadow:0 0 10px yellow;
 }
 
@@ -102,7 +103,7 @@ nav ul li a:hover{
 
 h1{
     color:darkblue;
-    font-size:65px;
+    font-size:60px;
 
     margin-top:30px;
     margin-bottom:40px;
@@ -126,7 +127,7 @@ h1{
     animation:floatTree 4s ease-in-out infinite;
 }
 
-/* ROWS */
+/* ROW */
 
 .row{
     display:flex;
@@ -137,7 +138,7 @@ h1{
     flex-wrap:wrap;
 }
 
-/* CARDS */
+/* CARD */
 
 .card{
     background:rgba(255,255,255,0.25);
@@ -159,7 +160,7 @@ h1{
 }
 
 .card:hover{
-    transform:translateY(-10px) scale(1);
+    transform:translateY(-10px) scale(1.05);
 
     box-shadow:0 15px 30px rgba(0,0,0,0.4);
 }
@@ -191,14 +192,14 @@ h1{
     0 0 30px skyblue;
 }
 
-/* NAMES */
+/* TEXT */
 
 .card h2{
     margin:15px 0 5px;
 
     color:darkred;
 
-    font-size:32px;
+    font-size:30px;
 }
 
 .card p{
@@ -209,7 +210,7 @@ h1{
     font-size:18px;
 }
 
-/* LINES */
+/* LINE */
 
 .line{
     width:5px;
@@ -240,7 +241,7 @@ footer{
     box-shadow:0 -4px 10px rgba(0,0,0,0.3);
 }
 
-/* POPUP BOX */
+/* POPUP */
 
 .popup{
     display:none;
@@ -268,7 +269,6 @@ footer{
 
 .popup h2{
     color:darkblue;
-    margin-bottom:15px;
 }
 
 .popup p{
@@ -299,7 +299,7 @@ footer{
     background:blue;
 }
 
-/* DARK BACKGROUND */
+/* OVERLAY */
 
 .overlay{
     display:none;
@@ -360,33 +360,74 @@ footer{
     }
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE VIEW */
 
 @media(max-width:768px){
 
     nav{
         flex-direction:column;
-        gap:15px;
+        padding:15px;
     }
 
     .logo{
-        font-size:30px;
+        font-size:28px;
+        margin-bottom:10px;
     }
 
     nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
         gap:15px;
     }
 
+    nav ul li a{
+        font-size:18px;
+    }
+
     h1{
-        font-size:45px;
+        font-size:38px;
+        padding:10px;
+    }
+
+    .tree{
+        width:100%;
+    }
+
+    .row{
+        flex-direction:column;
+        align-items:center;
+        gap:25px;
     }
 
     .card{
-        width:170px;
+        width:85%;
+        max-width:320px;
     }
 
     .card h2{
-        font-size:24px;
+        font-size:26px;
+    }
+
+    .card p{
+        font-size:16px;
+    }
+
+    .card img{
+        width:100px;
+        height:100px;
+    }
+
+    .line{
+        height:35px;
+    }
+
+    footer{
+        font-size:18px;
+        padding:15px;
+    }
+
+    .popup{
+        width:80%;
     }
 
 }
@@ -406,10 +447,13 @@ footer{
     </div>
 
     <ul>
-    <!--   <li><a href="#">Home</a></li>
+
+        <li><a href="#">Home</a></li>
+
         <li><a href="#">Parents</a></li>
+
         <li><a href="#">Children</a></li>
-    -->    
+
         <li>
             <a href="#" onclick="showContact()">
                 Contact
@@ -422,7 +466,7 @@ footer{
 
 <!-- HEADING -->
 
-<h1>Donthus Family Tree</h1>
+<h1>Family Tree</h1>
 
 <!-- TREE -->
 
@@ -433,25 +477,25 @@ footer{
     <div class="row">
 
         <div class="card">
-            <img src="images/gf1.jpg" alt="">
+            <img src="images/gf1.jpg">
             <h2>Grand Father 1</h2>
             <p>Father's Father</p>
         </div>
 
         <div class="card">
-            <img src="images/gm1.jpg" alt="">
+            <img src="images/gm1.jpg">
             <h2>Grand Mother 1</h2>
             <p>Father's Mother</p>
         </div>
 
         <div class="card">
-            <img src="images/gf2.jpg" alt="">
+            <img src="images/gf2.jpg">
             <h2>Grand Father 2</h2>
             <p>Mother's Father</p>
         </div>
 
         <div class="card">
-            <img src="images/gm2.jpg" alt="">
+            <img src="images/gm2.jpg">
             <h2>Grand Mother 2</h2>
             <p>Mother's Mother</p>
         </div>
@@ -465,13 +509,13 @@ footer{
     <div class="row">
 
         <div class="card">
-            <img src="images/father.jpg" alt="">
+            <img src="images/father.jpg">
             <h2>Father</h2>
             <p>Dad</p>
         </div>
 
         <div class="card">
-            <img src="images/mother.jpg" alt="">
+            <img src="images/mother.jpg">
             <h2>Mother</h2>
             <p>Mom</p>
         </div>
@@ -485,19 +529,19 @@ footer{
     <div class="row">
 
         <div class="card">
-            <img src="images/child1.jpg" alt="">
+            <img src="images/child1.jpg">
             <h2>Child 1</h2>
             <p>Son / Daughter</p>
         </div>
 
         <div class="card">
-            <img src="images/child2.jpg" alt="">
+            <img src="images/child2.jpg">
             <h2>Child 2</h2>
             <p>Son / Daughter</p>
         </div>
 
         <div class="card">
-            <img src="images/child3.jpg" alt="">
+            <img src="images/child3.jpg">
             <h2>Child 3</h2>
             <p>Son / Daughter</p>
         </div>
@@ -553,4 +597,3 @@ function closePopup(){
 </body>
 
 </html>
-
